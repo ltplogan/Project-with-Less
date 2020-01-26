@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PRIMEROS PASOS CON LESS</title>
+        <meta name="description" content="Una guía interactiva de primeros pasos para Less.">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet/less" type="text/css" href="style.less" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+    	<ul class="topnav">
+            <li><a class="active" href="#home">Inicio</a></li>
+             <li><a href="#">Item 2</a></li>
+              <li><a href="#">Item 3</a></li>
+               <li class="dropdown">
+                    <a class="dro" href="#">Item 4 
+                        <i class="fa fa-caret-down" style="vertical-align: middle;"></i>
+                    </a>
+
+                    <div class="dro-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+
+               <div class="buscar">
+
+                    <form action="">
+                        <input type="text" placeholder="Buscar" name="buscar">
+                          <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+               </div>
+           </ul>
+
+        <div class="container">
+
+            <div class="row">
+
+            <div class="navBar col-xs-12 col-2 relativo">
+                <!--<h4>RECOMENDACIONES</h4>
+                <br>
+                <img src="https://dummyimage.com/120x50/000/fff.jpg&text=+MARCA" style="display:block; margin: auto;">-->
+                <br>
+                <ul class="opciones">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Recomendaciones</a></li>
+
+                    <li><i class="fa fa-user-circle" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Mi música</a>
+                      
+                     
+                        <div id="miSidenav" class="sidenav">
+                            <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
+                        <div class="cajaSidenav">
+                            <h3>Cuenta</h3>
+                            <hr>
+                            <a href="#">Música</a>
+                            <a href="#">Suscribirse</a>
+                            <a href="#">Mis favoritas</a>
+                            <a href="#">Playlists</a>
+                        </div>
+                        </div>
+              
+                        <i class="fa fa-cog" style="font-size:18px; color: white; float: right; cursor: pointer;" onclick="openNav()"></i>
+
+                        <script type="text/javascript">
+                            function openNav() {
+                                document.getElementById("miSidenav").style.width = "250px";
+                            }
+
+                            function closeNav() {
+                                document.getElementById("miSidenav").style.width = "0";
+                            }
+                        </script>
+                    </li>
+
+                    <li>
+                        <div class="cajaSuscribirse">
+                            <span>
+                                Estás disfrutando de la versión gratuita.
+                            </span>
+                                <a href="https://owlcarousel2.github.io/OwlCarousel2/">
+                                    <button>Suscribirse</button>
+                                </a>
+                        </div>
+                    </li>
+
+                    <li><i class="fa fa-heart" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Mis favoritas</a></li>
+
+                    <li><i class="fa fa-music" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Playlists</a></li>
+
+                    <li><i class="fa fa-dot-circle-o" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Álbumes</a></li>
+
+                    <li><i class="fa fa-clock-o" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Actividad</a></li>
+                    <li><i class="fa fa-play-circle" style="font-size:18px; color: white; margin-right: 5px;"></i><a href="#">Aplicaciones</a></li>
+                </ul>
+                <br>
+                <!--<h4>Enlaces externos:</h4>
+                <br>
+                <ul>
+                    <li><a href="#">Actividad</a></li>
+                    <li><a href="#">Aplicaciones</a></li>
+                    <li><a href="#">enlace 3</a></li>
+                    <li><a href="#">enlace 4</a></li>
+                </ul>
+                <br>-->
+                <div class="cajaForm">
+                <h3>Login de usuarios</h3>
+                <br>
+                
+                <form id="miForm" action="">
+                    Usuario:
+                    <input type="text" name="usuario" placeholder="Usuario" autofocus>
+                    <br>
+                    Contraseña:
+                    <input type="password" name="psw" required>
+                    <br>
+                    <input type="checkbox" name="casilla">
+                    <br>
+                    <ul style="float:right;">
+                        <li><a href="#">Acceso con DNIe</a></li>
+                        <li><a href="#">Olvidé mí contraseña</a></li>
+                        <li><a href="#">Registrarme</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <br>
+                    <input type="submit" 
+                    value="Enviar">
+                    <input type="reset">
+                </form>
+                </div>
+                <br>
+            </div>
+
+            <div class="col-xs-12 col-9">
+                <div class="col-xs-12 col-9">
+                    <div id="clasificar">
+                      <button class="btn activar" onclick="seleccion('todo')"> Todo </button>
+                      <button class="btn" onclick="seleccion('rock')"> Rock</button>
+                      <button class="btn" onclick="seleccion('pop')"> Pop</button>
+                      <button class="btn" onclick="seleccion('heavy')"> Heavy</button>
+                    </div>
+                </div>
+
+           
+              <div class="col-3 rock col-xs-12">
+                <div class="content">
+                <div class="div">
+                  <img src="http://images.coveralia.com/audio/q/Queen-The_Works-Frontal.jpg" style="width:100%" alt="Rock">
+
+                  <ul class="dentro">
+                    <li>
+                        <i class="fa fa-play" onclick="play()"></i>
+                    </li>
+
+                    <li><i class="fa fa-pause" onclick="pause()"></i></li>
+                </ul>
+                </div>
+                <audio id="uno">
+                  <source src="audio/another.mp3" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+                  <br>
+                  <h4>Rock</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+
+              <div class="col-3 rock col-xs-12">
+                <div class="content">
+                <div class="div">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png" style="width:100%" alt="Rock">
+
+                <ul class="dentro">
+                    <li><i class="fa fa-play" onclick="playDos()"></i></li>
+
+                    <li><i class="fa fa-pause" onclick="pauseDos()"></i></li>
+                </ul>
+                </div>
+                <audio id="dos">
+                  <source src="audio/champion.mp3" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+
+                  <br>
+                  <h4>Rock</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="col-3 pop col-xs-12">
+                <div class="content">
+                <div class="div">
+                <img src="https://s-media-cache-ak0.pinimg.com/originals/cb/bf/b6/cbbfb69e5bd0f0d87eb88ad13b57d3dd.jpg" style="width:100%" alt="Pop">
+                <ul class="dentro">
+                    <li><i class="fa fa-play" onclick="playTres()"></i></li>
+
+                    <li><i class="fa fa-pause" onclick="pauseTres()"></i></li>
+                </ul>
+                </div>
+                <audio id="tres">
+                  <source src="audio/under.mp3" type="audio/mp3">
+                  Your browser does not support the audio element.
+                </audio>
+        
+                  <br>
+                  <h4>Pop</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              
+
+              <div class="col-3 pop col-xs-12">
+                <div class="content">
+                  <img src="https://img.discogs.com/odXD-TEck6eotpKldAQec63UwcM=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-613036-1362043328-6028.jpeg.jpg" style="width:100%" alt="Pop">
+                  <br>
+                  <h4>Pop</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="col-3 heavy col-xs-12">
+                <div class="content">
+                <img src="https://i.scdn.co/image/4460e15d6f30940e6599c6cdd220cf4408756452" style="width:100%" alt="Heavy">
+                  <br>
+                  <h4>Heavy</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="col-3 heavy col-xs-12">
+                <div class="content">
+                <img src="https://is2-ssl.mzstatic.com/image/thumb/Music1/v4/d0/04/5b/d0045beb-0b7e-62f4-0bd6-bb0b11b8c904/UMG_cvrart_00050087318383_01_RGB72_1500x1500_14DMGIM05553.jpg/1200x630bb.jpg" style="width:100%" alt="Heavy">
+                  <br>
+                  <h4>Heavy</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+
+              <!--<div class="col-3 heavy col-xs-12">
+                <div class="content">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png" style="width:100%" alt="Heavy" style="width:100%">
+                  <h4>Heavy</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              <div class="col-3 heavy col-xs-12">
+                <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png" style="width:100%" alt="Heavy" style="width:100%">
+                  <h4>Heavy</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+              
+              <div class="col-3 heavy col-xs-12">
+                <div class="content">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ea/Queen_News_Of_The_World.png" style="width:100%" alt="Heavy" style="width:100%">
+                  <h4>Heavy</h4>
+                  <p>Lorem ipsum dolor..</p>
+                </div>
+              </div>
+        
+            </div>-->
+
+            <script type="text/javascript">
+                var audio = document.getElementById("uno"); 
+
+                function play() { 
+                    audio.play(); 
+                    audioDos.pause();
+                } 
+
+                function pause() { 
+                    audio.pause(); 
+                } 
+
+                var audioDos = document.getElementById("dos"); 
+
+                function playDos() { 
+                    audioDos.play(); 
+                     audio.pause(); 
+                } 
+
+                function pauseDos() { 
+                    audioDos.pause(); 
+                } 
+
+                var audioTres = document.getElementById("tres"); 
+
+                function playTres() { 
+                    audioTres.play(); 
+                } 
+
+                function pauseTres() { 
+                    audioTres.pause(); 
+                } 
+            </script>
+
+            <script>
+             seleccion("todo")
+
+                function seleccion(evt) {
+                  var x, i;
+                  x = document.getElementsByClassName("col-3");
+                  if (evt == "todo") evt = " ";
+                  for (i = 0; i < x.length; i++) {
+                    imgRemoveClass(x[i], "show");
+                    /*El método indexOf () devuelve la posición de la primera aparición de un valor especificado en una cadena. Este método devuelve -1 si el valor para buscar nunca ocurre.*/
+                    if (x[i].className.indexOf(evt) > -1) imgAddClass(x[i], "show");
+                  }
+                }
+
+                function imgAddClass(element, nombre) {
+                  var i, a, b;
+                  /*El método split () se usa para dividir una cadena en una matriz de subcadenas y devuelve la nueva matriz.*/
+                  a = element.className.split(" ");
+                  b = nombre.split(" ");
+                  for (i = 0; i < b.length; i++) {
+                    if (a.indexOf(b[i]) == -1) {
+                    element.className += " " + b[i];
+                    }
+                  }
+                }
+
+                function imgRemoveClass(element, nombre) {
+                  var i, a, b;
+                  a = element.className.split(" ");
+                  b = nombre.split(" ");
+                  for (i = 0; i < b.length; i++) {
+                    while (a.indexOf(b[i]) > -1) {
+                    /*El método splice () agrega / elimina elementos a / desde una matriz y devuelve los elementos eliminados.*/
+                      a.splice(a.indexOf(b[i]), 1);     
+                    }
+                  }
+                  /*El método join () une los elementos de una matriz en una cadena y devuelve la cadena.*/
+                  element.className = a.join(" ");
+                }
+
+                var clasificar = document.getElementById("clasificar");
+                var botones = clasificar.getElementsByClassName("btn");
+
+                for (var i = 0; i < botones.length; i++) {
+                  botones[i].addEventListener("click", function(){
+
+                var activar = document.getElementsByClassName("activar");
+                activar[0].className = activar[0].className.replace("activar", "");
+                    this.className += " activar";
+                  });
+                }
+
+                var cuenta = 0, posicion, promedio;
+                var miCadena = "Hello Hello world, welcome to the universe.";
+                var element = 'Hello';
+
+                posicion = miCadena.indexOf(element);
+
+                while ( posicion != -1 ) {
+                   cuenta++;
+                   posicion = miCadena.indexOf(element,posicion + 1);
+                }
+
+                if(cuenta > 0) {
+                    document.write(cuenta + "<br>");
+                }
+
+                //2
+
+                var indices = [];
+                var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+                var element = 'a';
+                var resultado = array.indexOf(element);
+                while (resultado != -1) {
+                    //El método push () agrega nuevos elementos al final de una matriz y devuelve la nueva longitud.
+                    indices.push(resultado);
+                    resultado = array.indexOf(element, resultado + 1);
+                }
+                document.write(indices);
+                // [0, 2, 4]
+
+            </script>
+
+            </div>
+
+            </div>
+         </div>
+
+         <footer id="main-footer">
+      <div class="container">
+          <div class="footer-right">
+              <nav class="footer-nav">
+                  <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>   
+                  </ul>
+              </nav>
+              <nav class="footer-nav">
+                  <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>   
+                  </ul>
+              </nav>
+               <nav class="footer-nav">
+                  <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>   
+                  </ul>
+              </nav>
+          </div>
+          <div class="footer-left">
+              <p class="copy">Copyright &copy: 2018, Lorenzo Toledo</p>
+          </div>
+      </div>
+  </footer>
+    
+    </body>
+</html>
